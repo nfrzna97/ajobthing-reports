@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AM Outreach — Q4 HR Dapat Apa?</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;padding:20px}
+h1{font-size:20px;font-weight:700;color:#111;margin-bottom:4px}
+.sub{color:#666;font-size:13px;margin-bottom:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:18px;overflow:hidden}
+.am-hdr{padding:14px 18px 10px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.am-info .am-name{font-size:15px;font-weight:700;color:#111}
+.cnt{display:inline-block;background:#e8f4fd;color:#1565c0;font-size:11px;font-weight:600;padding:1px 7px;border-radius:10px;margin-left:6px}
+.am-info .am-email{font-size:12px;color:#888;margin-top:2px}
+.btn-lark{padding:6px 12px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:#e3f2fd;color:#1565c0}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead tr{background:#f8f9fa}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+th{font-weight:600;color:#555;font-size:12px}
+.badge-coffee{background:#fff3e0;color:#bf360c;font-weight:700;padding:2px 10px;border-radius:5px;font-size:12px}
+.badge-tea{background:#e8f5e9;color:#1b5e20;font-weight:700;padding:2px 10px;border-radius:5px;font-size:12px}
+.btn-winner{padding:6px 12px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:#1976d2;color:#fff;white-space:nowrap}
+.btn-winner.ok{background:#43a047}
+.wa-link{color:#25d366;font-weight:600;text-decoration:none;font-size:12px}
+</style>
+</head>
+<body>
+<h1>AM Outreach List — Q4 HR Dapat Apa?</h1>
+<p class="sub">Generated 21 Oct 2026 · 40 winners across 17 Account Managers · Reward: Coffee Voucher RM10 or Tea Voucher RM10</p>
+<div id="cards"></div>
+<script>
+const AMS=[
+  {"name":"Angel Low","email":"angellow@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=Ambj%2FRofgUAgamnNaEJATug%3D","winners":[
+    {"company":"Samchen Global Capital Sdn. Bhd.","phone":"601116339684","prize":"Coffee"},
+    {"company":"Pristine Gateway Sdn Bhd","phone":"60129324010","prize":"Tea"},
+    {"company":"GABM Sdn Bhd","phone":"60197293163","prize":"Tea"}
+  ]},
+  {"name":"Carmen","email":"carmen@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmkDKaSqAM7gapEBiMYAjug%3D","winners":[
+    {"company":"Pure Heart Care Centre Sdn Bhd","phone":"60124625282","prize":"Coffee"},
+    {"company":"Drewno Essence Sdn Bhd","phone":"60162229762","prize":"Coffee"},
+    {"company":"Fern & Stone Sdn Bhd","phone":"60196535827","prize":"Coffee"},
+    {"company":"Clarte Holding Sdn Bhd","phone":"60149272943","prize":"Coffee"}
+  ]},
+  {"name":"Chia Yee","email":"chiayee@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmbC4FZ7AAAgamnPUNKADts%3D","winners":[
+    {"company":"Maslow SA Sdn. Bhd.","phone":"60126687300","prize":"Tea"}
+  ]},
+  {"name":"Edward","email":"edward@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZMT7RnQQAfapEBpUxATuk%3D","winners":[
+    {"company":"Promal (Malaysia) Sdn Bhd","phone":"60378473611","prize":"Coffee"},
+    {"company":"Office Bagus International Sdn Bhd","phone":"60197784054","prize":"Tea"}
+  ]},
+  {"name":"Emily","email":"emily@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmpXN9ThwA7iamv%2FXi6ADtw%3D","winners":[
+    {"company":"Hot Bird Sdn Bhd","phone":"60129130291","prize":"Coffee"},
+    {"company":"XGD Logistic Sdn Bhd","phone":"60128970613","prize":"Coffee"}
+  ]},
+  {"name":"Eugene","email":"eugene@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmjBFc3vwIAmamnNAHMADuk%3D","winners":[
+    {"company":"Wisdom and Health Sdn Bhd","phone":"60102283891","prize":"Tea"}
+  ]},
+  {"name":"Evan","email":"evan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmiUYMvrAoAnasTUeWlATug%3D","winners":[
+    {"company":"Suon Kee Preserved Fruits","phone":"60126877110","prize":"Tea"}
+  ]},
+  {"name":"Fauziah","email":"fauziah@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZMP07EQYAfapEBdHzADuk%3D","winners":[
+    {"company":"Koon Ken Metal Engineering Sdn Bhd","phone":"60186663321","prize":"Coffee"}
+  ]},
+  {"name":"Haley","email":"haley@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmqG0k7ewA7catgXmynAjw8%3D","winners":[
+    {"company":"Guang Heng Plastic Industries Sdn Bhd","phone":"6076525413","prize":"Coffee"},
+    {"company":"Compact Contech Sdn. Bhd.","phone":"601112271345","prize":"Coffee"},
+    {"company":"Edu4u Sdn Bhd","phone":"60184659867","prize":"Tea"}
+  ]},
+  {"name":"Janice","email":"janice@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmmL4f8eQU7eamwA%2FLOADts%3D","winners":[
+    {"company":"Openb Sdn. Bhd.","phone":"60108929106","prize":"Coffee"},
+    {"company":"New Style Enterprise","phone":"60127938166","prize":"Tea"},
+    {"company":"Gemilang Group Plt (Klinik Seri Gembira Avenue)","phone":"60123665969","prize":"Tea"}
+  ]},
+  {"name":"Jess Lim","email":"jess@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmgO8%2BOdQ8AnauGWaFyADxI%3D","winners":[
+    {"company":"TTL Sales & Rental Sdn Bhd","phone":"60389554466","prize":"Coffee"},
+    {"company":"Chateau Dionne KL Sdn Bhd","phone":"60123386421","prize":"Tea"}
+  ]},
+  {"name":"Keegan","email":"keegan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=Amgug%2B%2BGAIAfamwBkdyyzug%3D","winners":[
+    {"company":"LG Eatery Sdn Bhd","phone":"60149375088","prize":"Coffee"},
+    {"company":"Create Asset Management Sdn Bhd","phone":"60197487798","prize":"Coffee"},
+    {"company":"Amazon Plumbing Sdn Bhd","phone":"60166041959","prize":"Tea"}
+  ]},
+  {"name":"Keith","email":"keith@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmpfQGxj2g7bamwAk8AADuU%3D","winners":[
+    {"company":"Excel GSA (M) Sdn Bhd","phone":"60164126246","prize":"Coffee"},
+    {"company":"CY Uniform (M) Sdn Bhd","phone":"60172201119","prize":"Coffee"}
+  ]},
+  {"name":"Lucas","email":"lucas@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmmmWfR2QI7hamwAYS3ADt0%3D","winners":[
+    {"company":"JH Creative Enterprise","phone":"60122312331","prize":"Tea"},
+    {"company":"Pro-Fine Plastics Sdn Bhd","phone":"60126840214","prize":"Tea"},
+    {"company":"Pro Men Sdn Bhd","phone":"60108234779","prize":"Tea"}
+  ]},
+  {"name":"Alan KY","email":"alanchan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZMUM6HQUAfamnNrDoADt4%3D","winners":[
+    {"company":"GJSIXTYSIX Sdn Bhd","phone":"601163446627","prize":"Coffee"},
+    {"company":"Herbnova Wellness Sdn. Bhd.","phone":"60168544425","prize":"Coffee"}
+  ]},
+  {"name":"Stella","email":"stella@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmoT8uLyAQ7caobSGotAzuI%3D","winners":[
+    {"company":"Kuala Lumpur Industrial Engineering Sdn Bhd","phone":"60127876433","prize":"Tea"}
+  ]},
+  {"name":"YuLi","email":"yuli@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZK3tmPwAAgamwCJwuADuU%3D","winners":[
+    {"company":"Wheelcorp Sdn Bhd","phone":"60126410399","prize":"Coffee"},
+    {"company":"Vinerock Retail Sdn. Bhd.","phone":"601122333399","prize":"Tea"},
+    {"company":"EU Vacations Sdn Bhd","phone":"6583009974","prize":"Tea"},
+    {"company":"Dayi Wantan","phone":"601125478043","prize":"Tea"},
+    {"company":"BLAZING GAMES SDN. BHD.","phone":"60175200488","prize":"Tea"},
+    {"company":"J&S Associate Plt","phone":"601131284710","prize":"Tea"}
+  ]}
+];
+
+const CAMPAIGN="HR, Dapat Apa?";
+
+function buildClientMsg(w){
+  const reward=w.prize==='Coffee'?'Coffee Voucher - RM10':'Tea Voucher - RM10';
+  return `Hi ${w.company} 👋\n\nCongratulations 🎉 You are one of the winners of our ${CAMPAIGN} campaign by AJobThing.\n\n🏆 Your reward: ${reward}\n\nTo make sure you receive your reward without any hassle, kindly share us the details below:\n\nName:\nPhone:\n\nPlease make sure all the details are correct so we can proceed with the delivery soon.\n\nThank you, and congratulations again! 😊`;
+}
+
+function buildAMMsg(am, w){
+  const reward=w.prize==='Coffee'?'Coffee Voucher - RM10':'Tea Voucher - RM10';
+  const waUrl=`https://wa.me/${w.phone}?text=${encodeURIComponent(buildClientMsg(w))}`;
+  const lines=[
+    `Hi ${am.name}, due to an issue with my phone number, I need your help to send the ${CAMPAIGN} prize message to your client.`,
+    `Your customer ${w.company} has won the ${reward}. I've prepared a WhatsApp link with the message already pre-filled.`,
+    ``,
+    `What to do:`,
+    `1. Click the link below. It opens WhatsApp with a message already typed out to ${w.company} (${w.phone}).`,
+    `2. Before sending, check that the company name and reward type match: ${reward}.`,
+    `3. Send the message as-is (don't need to add anything).`,
+    `4. Reply here once it's sent, so we can mark it as completed.`,
+    `5. If the number I used turns out to be wrong, feel free to text the client at the correct number instead.`,
+    `WhatsApp link: ${waUrl}`,
+    ``,
+    `Thanks so much for helping out!`
+  ];
+  const plain=lines.join('\n');
+  const htmlLines=lines.map(l=>
+    l.startsWith('WhatsApp link: ')
+      ? `WhatsApp link: <a href="${waUrl}" target="_blank" rel="noopener">Open WhatsApp ↗</a>`
+      : l
+  );
+  const rich=htmlLines.join('<br>');
+  return {plain,rich,waUrl};
+}
+
+async function richCopy(plain,rich){
+  if(navigator.clipboard&&window.ClipboardItem&&window.isSecureContext){
+    try{
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html':new Blob([rich],{type:'text/html'}),
+        'text/plain':new Blob([plain],{type:'text/plain'})
+      })]);
+      return true;
+    }catch(e){}
+  }
+  try{
+    const d=document.createElement('div');
+    d.innerHTML=rich;
+    Object.assign(d.style,{position:'fixed',opacity:'0',pointerEvents:'none'});
+    document.body.appendChild(d);
+    const r=document.createRange();r.selectNodeContents(d);
+    const s=window.getSelection();s.removeAllRanges();s.addRange(r);
+    const ok=document.execCommand('copy');
+    s.removeAllRanges();document.body.removeChild(d);
+    if(ok)return true;
+  }catch(e){}
+  try{
+    const ta=document.createElement('textarea');
+    ta.value=plain;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    return true;
+  }catch(e){}
+  return false;
+}
+
+async function copyAndOpenWinner(amIdx,wIdx,btn){
+  const am=AMS[amIdx],w=am.winners[wIdx];
+  const {plain,rich}=buildAMMsg(am,w);
+  const orig=btn.innerHTML;
+  btn.classList.add('ok');
+  const ok=await richCopy(plain,rich);
+  btn.textContent=ok?'✅ Copied!':'⚠️ Failed';
+  setTimeout(()=>{btn.innerHTML=orig;btn.classList.remove('ok')},2500);
+  if(am.chat_url)setTimeout(()=>window.open(am.chat_url,'_blank'),100);
+}
+
+function render(){
+  const root=document.getElementById('cards');
+  AMS.forEach((am,i)=>{
+    const larkBtn=am.chat_url
+      ? `<button class="btn-lark" onclick="window.open('${am.chat_url}','_blank')">💬 Open Lark Chat</button>`
+      : `<span style="font-size:11px;color:#aaa">No chat link</span>`;
+
+    const rows=am.winners.map((w,j)=>{
+      const clientMsg=buildClientMsg(w);
+      const waUrl=`https://wa.me/${w.phone}?text=${encodeURIComponent(clientMsg)}`;
+      const badgeClass=w.prize==='Coffee'?'badge-coffee':'badge-tea';
+      const prizeIcon=w.prize==='Coffee'?'☕':'🍵';
+      return `<tr>
+        <td>${w.company}</td>
+        <td>${w.phone}</td>
+        <td><span class="${badgeClass}">${prizeIcon} ${w.prize} RM10</span></td>
+        <td>
+          <button class="btn-winner" id="wb-${i}-${j}" onclick="copyAndOpenWinner(${i},${j},this)">💬📋 Copy &amp; Open Chat</button>
+        </td>
+        <td><a class="wa-link" href="${waUrl}" target="_blank">WhatsApp ↗</a></td>
+      </tr>`;
+    }).join('');
+
+    root.insertAdjacentHTML('beforeend',`<div class="card">
+<div class="am-hdr">
+  <div class="am-info">
+    <div class="am-name">${am.name}<span class="cnt">${am.winners.length} winner${am.winners.length>1?'s':''}</span></div>
+    <div class="am-email">${am.email||'<span style="color:#f57c00">⚠️ Email unknown</span>'}</div>
+  </div>
+  ${larkBtn}
+</div>
+<table><thead><tr><th>Company</th><th>Phone</th><th>Prize</th><th>Action</th><th>Direct WA</th></tr></thead><tbody>${rows}</tbody></table>
+</div>`);
+  });
+}
+render();
+</script>
+</body>
+</html>
