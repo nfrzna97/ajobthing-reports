@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AM Outreach — Q4 10.10 Tentastic Sale</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;padding:20px}
+h1{font-size:20px;font-weight:700;color:#111;margin-bottom:4px}
+.sub{color:#666;font-size:13px;margin-bottom:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:18px;overflow:hidden}
+.am-hdr{padding:14px 18px 10px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.am-info .am-name{font-size:15px;font-weight:700;color:#111}
+.cnt{display:inline-block;background:#e8f4fd;color:#1565c0;font-size:11px;font-weight:600;padding:1px 7px;border-radius:10px;margin-left:6px}
+.am-info .am-email{font-size:12px;color:#888;margin-top:2px}
+.btn-lark{padding:6px 12px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:#e3f2fd;color:#1565c0}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead tr{background:#f8f9fa}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+th{font-weight:600;color:#555;font-size:12px}
+.badge-30{background:#fff3e0;color:#e65100;font-weight:700;padding:2px 10px;border-radius:5px;font-size:12px}
+.badge-20{background:#e8f5e9;color:#2e7d32;font-weight:700;padding:2px 10px;border-radius:5px;font-size:12px}
+.btn-winner{padding:6px 12px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:#1976d2;color:#fff;white-space:nowrap}
+.btn-winner.ok{background:#43a047}
+.wa-link{color:#25d366;font-weight:600;text-decoration:none;font-size:12px}
+</style>
+</head>
+<body>
+<h1>AM Outreach List — Q4 10.10 Tentastic Sale</h1>
+<p class="sub">Generated 14 Oct 2026 · 13 winners across 9 Account Managers · Reward: TNG eWallet (RM20 or RM30)</p>
+<div id="cards"></div>
+<script>
+const AMS=[
+  {"name":"Keegan","email":"keegan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=Amgug%2B%2BGAIAfamwBkdyyzug%3D","winners":[
+    {"company":"Chicago Chicken City Sdn Bhd","phone":"60129008323","amount":30},
+    {"company":"Union Feast F&B Sdn Bhd","phone":"60129008323","amount":30}
+  ]},
+  {"name":"Evan","email":"evan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmiUYMvrAoAnasTUeWlATug%3D","winners":[
+    {"company":"Taka Global Sdn Bhd","phone":"60175977291","amount":30},
+    {"company":"Frozen Artisans Sdn Bhd","phone":"60178752602","amount":30}
+  ]},
+  {"name":"Jess Lim","email":"jess@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmgO8%2BOdQ8AnauGWaFyADxI%3D","winners":[
+    {"company":"Mode Fair Sdn Bhd","phone":"60123959922","amount":30}
+  ]},
+  {"name":"Chia Yee","email":"chiayee@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmbC4FZ7AAAgamnPUNKADts%3D","winners":[
+    {"company":"HGS Display Sdn Bhd","phone":"60175977291","amount":30},
+    {"company":"Bake by Me! Sdn Bhd","phone":"60178208417","amount":20}
+  ]},
+  {"name":"YuLi","email":"yuli@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZK3tmPwAAgamwCJwuADuU%3D","winners":[
+    {"company":"SLS Bearings (Malaysia) Sdn Bhd","phone":"60122991715","amount":30}
+  ]},
+  {"name":"Haley","email":"haley@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmqG0k7ewA7catgXmynAjw8%3D","winners":[
+    {"company":"D Solar Sdn. Bhd.","phone":"60139324943","amount":20},
+    {"company":"Gen Next Solutions Plt","phone":"60164106919","amount":20}
+  ]},
+  {"name":"Emily","email":"emily@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmpXN9ThwA7iamv%2FXi6ADtw%3D","winners":[
+    {"company":"Komatsu Malaysia Sdn Bhd","phone":"60129414023","amount":20}
+  ]},
+  {"name":"Alan KY","email":"alanchan@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmZMUM6HQUAfamnNrDoADt4%3D","winners":[
+    {"company":"Sunward Intelligent (M) Sdn. Bhd.","phone":"60126559093","amount":20}
+  ]},
+  {"name":"Lucas","email":"lucas@ajobthing.com","chat_url":"https://applink.larksuite.com/client/message/link/open?token=AmmmWfR2QI7hamwAYS3ADt0%3D","winners":[
+    {"company":"PCA Steel Engineering Sdn Bhd","phone":"60109780478","amount":20}
+  ]}
+];
+
+const CAMPAIGN="10.10 Tentastic Sale: Pick Your Reward";
+
+function buildClientMsg(w){
+  return `Hi ${w.company} 🎉\n\nCongratulations 🎉 You are one of the winners of our ${CAMPAIGN} campaign by AJobThing.\n\n🏆 Your reward: TNG eWallet RM${w.amount}\n\nTo make sure you receive your reward without any hassle, kindly share us the details below:\n\nName:\nPhone:\n\nPlease make sure all the details are correct so we can proceed with the delivery soon.\n\nThank you, and congratulations again! 🎉`;
+}
+
+function buildAMMsg(am, w){
+  const waUrl=`https://wa.me/${w.phone}?text=${encodeURIComponent(buildClientMsg(w))}`;
+  const lines=[
+    `Hi ${am.name}, due to an issue with my phone number, I need your help to send the ${CAMPAIGN} prize message to your client.`,
+    `Your customer ${w.company} has won TNG eWallet worth RM${w.amount}. I've prepared a WhatsApp link with the message already pre-filled.`,
+    ``,
+    `What to do:`,
+    `1. Click the link below. It opens WhatsApp with a message already typed out to ${w.company} (${w.phone}).`,
+    `2. Before sending, check that the company name and prize amount match: RM${w.amount} TNG eWallet.`,
+    `3. Send the message as-is (don't need to add anything).`,
+    `4. Reply here once it's sent, so we can mark it as completed.`,
+    `5. If the number I used turns out to be wrong, feel free to text the client at the correct number instead.`,
+    `WhatsApp link: ${waUrl}`,
+    ``,
+    `Thanks so much for helping out!`
+  ];
+  const plain=lines.join('\n');
+  const htmlLines=lines.map(l=>
+    l.startsWith('WhatsApp link: ')
+      ? `WhatsApp link: <a href="${waUrl}" target="_blank" rel="noopener">Open WhatsApp ↗</a>`
+      : l
+  );
+  const rich=htmlLines.join('<br>');
+  return {plain,rich,waUrl};
+}
+
+async function richCopy(plain,rich){
+  if(navigator.clipboard&&window.ClipboardItem&&window.isSecureContext){
+    try{
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html':new Blob([rich],{type:'text/html'}),
+        'text/plain':new Blob([plain],{type:'text/plain'})
+      })]);
+      return true;
+    }catch(e){}
+  }
+  try{
+    const d=document.createElement('div');
+    d.innerHTML=rich;
+    Object.assign(d.style,{position:'fixed',opacity:'0',pointerEvents:'none'});
+    document.body.appendChild(d);
+    const r=document.createRange();r.selectNodeContents(d);
+    const s=window.getSelection();s.removeAllRanges();s.addRange(r);
+    const ok=document.execCommand('copy');
+    s.removeAllRanges();document.body.removeChild(d);
+    if(ok)return true;
+  }catch(e){}
+  try{
+    const ta=document.createElement('textarea');
+    ta.value=plain;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    return true;
+  }catch(e){}
+  return false;
+}
+
+async function copyAndOpenWinner(amIdx,wIdx,btn){
+  const am=AMS[amIdx],w=am.winners[wIdx];
+  const {plain,rich}=buildAMMsg(am,w);
+  const orig=btn.innerHTML;
+  btn.classList.add('ok');
+  const ok=await richCopy(plain,rich);
+  btn.textContent=ok?'✅ Copied!':'⚠️ Failed';
+  setTimeout(()=>{btn.innerHTML=orig;btn.classList.remove('ok')},2500);
+  if(am.chat_url)setTimeout(()=>window.open(am.chat_url,'_blank'),100);
+}
+
+function render(){
+  const root=document.getElementById('cards');
+  AMS.forEach((am,i)=>{
+    const larkBtn=am.chat_url
+      ? `<button class="btn-lark" onclick="window.open('${am.chat_url}','_blank')">💬 Open Lark Chat</button>`
+      : `<span style="font-size:11px;color:#aaa">No chat link</span>`;
+
+    const rows=am.winners.map((w,j)=>{
+      const clientMsg=buildClientMsg(w);
+      const waUrl=`https://wa.me/${w.phone}?text=${encodeURIComponent(clientMsg)}`;
+      const badgeClass=w.amount===30?'badge-30':'badge-20';
+      return `<tr>
+        <td>${w.company}</td>
+        <td>${w.phone}</td>
+        <td><span class="${badgeClass}">TNG RM${w.amount}</span></td>
+        <td>
+          <button class="btn-winner" id="wb-${i}-${j}" onclick="copyAndOpenWinner(${i},${j},this)">💬📋 Copy &amp; Open Chat</button>
+        </td>
+        <td><a class="wa-link" href="${waUrl}" target="_blank">WhatsApp ↗</a></td>
+      </tr>`;
+    }).join('');
+
+    root.insertAdjacentHTML('beforeend',`<div class="card">
+<div class="am-hdr">
+  <div class="am-info">
+    <div class="am-name">${am.name}<span class="cnt">${am.winners.length} winner${am.winners.length>1?'s':''}</span></div>
+    <div class="am-email">${am.email||'<span style="color:#f57c00">⚠️ Email unknown</span>'}</div>
+  </div>
+  ${larkBtn}
+</div>
+<table><thead><tr><th>Company</th><th>Phone</th><th>Prize</th><th>Action</th><th>Direct WA</th></tr></thead><tbody>${rows}</tbody></table>
+</div>`);
+  });
+}
+render();
+</script>
+</body>
+</html>
